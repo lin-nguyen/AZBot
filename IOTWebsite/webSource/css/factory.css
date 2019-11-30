@@ -1,0 +1,456 @@
+html {
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #ffffff;
+    text-rendering: optimizeLegibility;
+    transition: all 0.5s;
+}
+
+* {
+    /* padding: 0px; */
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+input{
+    outline: none;
+    border: ridge 1px black;
+    border-radius: 5px;
+  }
+
+  input[type=range] {
+    -webkit-appearance: none;
+    border-style: none;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+  input[type=range]::-webkit-slider-thumb {
+      position: relative;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    width: 10%;
+    height: 400%;
+    background: #ededed;
+    cursor: pointer;
+    -webkit-appearance: none;
+    top: -150%;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+      box-shadow: 0px 0px 8px black;
+    background: #367ebd;
+  }
+  input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    width: 10%;
+    height: 400%;
+  }
+  input[type=text]:focus{
+      box-shadow: 0px 0px 8px #367ebd;
+  }
+body{
+    background-color: #f3f3f3;
+}
+@media all and (max-width: 900px){
+    html{
+        font-size: 10px;
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+        height: 4.2px;
+    }
+}
+/* -------------------------------------------TEMPLATE MASTHREAD--------------------------------------- */
+
+.masthread-container{
+    position: fixed;
+    background-color: #1d1d1d;
+    width: 100vw;
+    height: 10vh;
+    border-bottom: solid 5px #3b3b3b;
+}
+
+
+.icon-div{
+    color: white;
+    padding: 1% 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.logo-div{
+    margin-left: 5%;
+    height: 100%;
+    max-width: 8%;
+}
+.logo-adress{
+    height: 100%;
+    max-width: 100%;
+}
+.logo-img{
+    height: 100%;
+    max-width: 100%;
+    color: white;
+}
+
+.page-name{
+    width: 40%;
+    text-align: center;
+    margin-left: 10%;
+    color: white;
+}
+.page-name-1{
+    display: inline-block;
+    font-size: 2.2em;
+    background: -webkit-linear-gradient(45deg, #eee, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.page-name-2{
+    margin-left: 2%;
+    display: inline-block;
+    font-size: 1.2em;
+    background: -webkit-linear-gradient(#eee, grey);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.header-action{
+    float: right;
+    margin-right: 5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+.Logout{
+    border: inset 3px #0795df;
+    color: #0795df;
+    width: 6rem;
+    padding: 5% 5%;
+    border-radius: 5%;
+    background-color:#3d4357;
+    transition: all 0.1s;
+}
+
+.Logout:hover{
+    background-color: #b2aba3;
+}
+
+
+/* -------------------------------TEMPLATE MINI GUIDE ------------------------*/
+
+.mini-guide{
+    position: fixed;
+    margin-top: 10vh;
+    width: 3vw;
+    height: 88vh;
+    background-color: #353c51;
+    border-right: inset 5px #3b3b3b;
+}
+
+.redirect-homepage{
+    width: 100%;
+    font-size: 1em;
+    border-bottom: solid 1px black;
+}
+
+.function{
+    width: 100%;
+    font-size: 1em;
+    border-bottom: solid 1px black;
+    cursor: pointer;
+}
+
+.contact{
+    width: 100%;
+    font-size: 1em;
+    border-bottom: solid 1px black;
+}
+
+.Description{
+    width: 100%;
+    font-size: 1em;
+    border-bottom: solid 1px black;
+}
+
+
+.a-homepage, .a-function, .a-contact, .a-description{
+    display: inline-block;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    color: #b2aba3;
+}
+.a-homepage:hover, .a-function:hover, .a-contact:hover, .a-description:hover{
+    color: #ecede6;
+    background-color: #3d4357;
+    border-left: solid 3px #0795df;
+}
+
+/* ---------------------------TEMPLATE main-manager----------------------- */
+
+.main-manager{
+    margin-top: 10vh;
+    background-color: #f5f5f5;
+    margin-left: 3vw;
+    width: 97vw;
+    height: auto;
+    min-height: 88vh;
+    transition: all 0.2s;
+}
+
+.factory-camera{
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 69%;
+    height: 70vh;
+    transition: all 0.1s;
+}
+.factory-camera:hover{
+    box-shadow: 0px 0px 5px black;
+}
+
+.factory-video{
+    background-color: #ededed;
+    width: 100%;
+    height: 100%;
+}
+.factory-controller{
+    transition: all 0.2s;
+    margin-top: 1%;
+    margin-right: 1%;
+    float: right;
+    width: 25%;
+    height: 85vh;
+}
+
+
+.belt-controller{
+    width: 100%;
+    background-color: #e9eff4;
+    height: auto;
+    margin-bottom: 1%;
+    border: solid 1px #b2b7c4;
+    border-radius: 2%;
+    padding-bottom: 2%;
+}
+
+.belt-controller:hover{
+    box-shadow: 0px 0px 5px black;
+}
+.belt-name{
+    font-weight: 700;
+    padding: 3% 2%;
+    width: 90%;
+    padding-left: 10%;
+    border-bottom: solid 1px #858c9d;
+    margin-left: 5%;
+    color: #858c9d;
+}
+.belt-status{
+    margin-left: 5%;
+    padding: 5% 5%;
+    width: 90%;
+}
+.belt-status-name{
+    vertical-align: middle;
+    display: inline-block;
+    width: 75%;
+    font-size: 0.8em;
+    color: #858c9d;
+}
+.belt-status-class{
+    border: solid 2px #76d4e1;
+    background-color: gray;
+    color: white;
+    font-weight: 500;
+    width: 19%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+.belt-status-class:hover{
+    background-color: black;
+}
+.belt-speed-name{
+    font-size: 0.8em;
+    margin-left: 10%;
+    margin-right: 5%;
+    display: block;
+    color: #858c9d;
+}
+.belt-speed-class{
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 90%;
+    cursor: pointer;
+}
+
+.arm-controller{
+    background-color: #e9eff4;
+    border: solid 1px #b2b7c4;
+    border-radius: 2%;
+    height: auto;
+    width: 100%;
+}
+
+.arm-controller:hover{
+    box-shadow: 0px 0px 5px black;
+}
+
+.arm-name{
+    padding: 3% 2%;
+    width: 90%;
+    padding-left: 10%;
+    font-weight: 700;
+    border-bottom: solid 1px #858c9d;
+    margin-left: 5%;
+    color: #858c9d;
+}
+
+.arm-auto-destination{
+    border-radius: 3px;
+    background-color: white;
+    border: solid 3px #f5f5f5;
+    padding: 5% 5%;
+    width: 96%;
+    margin-left: 2%;
+    margin-top: 5%;
+}
+.pauto{
+    margin-left: 2%;
+    width: 20%;
+    display: inline-block;
+}
+.arm-auto-name{
+    width: 90%;
+    margin-bottom: 3%;
+    text-align: center;
+    font-size: 0.8em;
+    color: #0795df;
+}
+.arm-l{
+    width: 60%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 0.8em;
+    text-align: center;
+}
+.arm-auto-class{
+    background-color: gray;
+    border: solid 2px #76d4e1;
+    font-weight: 500;
+    font-size: 0.8em;
+    color: white;
+    width: 28%;
+    padding: 3% 1%;
+    cursor:pointer;
+}
+
+.arm-auto-class:hover{
+    background-color: black;
+}
+
+.arm-handwork{
+    border-radius: 3px;
+    border: solid 3px #f5f5f5;
+    padding: 5% 5%;
+    width: 96%;
+    height: auto;
+    margin-left: 2%;
+    margin-top: 2%;
+    background-color: white;
+}
+
+.arm-handwork-name{
+    width: 90%;
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 0.8em;
+}
+
+.phandwork{
+    font-size: 0.8em;
+    padding: 3% 2%;
+    vertical-align: middle;
+    width: 100%;
+    margin-right: 5%;
+}
+
+.arm-j{
+    margin-left: 4%;
+    margin-right: 2%;
+    width: 60%;
+}
+
+.sensor-information{
+    border-radius: 2%;
+    width: 69%;
+    height: 10vh;
+    margin-left: 1%;
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 0.2s;
+}
+
+.sensor{
+    background-color:#ecede6; 
+    border: solid 1px black;
+    width: 20%;
+    height: 80%;
+    margin: 1% 2%;
+    border-radius: 5%;
+}
+.sensor p{
+    font-size: 0.8em;
+    width: 90%;
+    margin: 3% 5%;
+    text-align: center;
+}
+
+.sensor:hover{
+    box-shadow: 0px 0px 5px black;
+}
+/* TEMPLATE */
+
+.fa-home, .fa-arrow-circle-down, .fa-file-signature, .fa-question{
+    margin-right: 10%;
+}

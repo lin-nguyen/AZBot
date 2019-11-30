@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/factory.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/edb0ed1b03.js"></script>
+    <title>MANAGEMENT</title>
+</head>
+
+<body>
+    <div class="masthread-container">
+        <div class="icon-div" id="icon-div">
+            <i class="fas fa-list-ul"></i>
+        </div>
+        <div class="logo-div">
+            <a href="#" class="logo-adress"><img src="../imagine/Logo2.png" alt="LOGO" class="logo-img"></a>
+        </div>
+        <div class="page-name">
+            <p class="page-name-1">AZBot</p>
+            <p class="page-name-2">  IoT system for Manufacturing</p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="header-action">
+            <a href="#" class="Logout" id="Logout"> <span><i class="fas fa-sign-out-alt"></i></span> Log out</a>
+        </div>
+    </div>
+    <div class="mini-guide" id="mini-guide">
+        <div class="redirect-homepage">
+            <a href="#" class="a-homepage"> <span><i class="fas fa-home"></i></span> <span style="display: none"
+                    id="span-homepage">Home page</span> </a>
+        </div>
+        <div class="function">
+            <p class="a-function"> <span><i class="fas fa-arrow-circle-down"></i></span> <span style="display: none"
+                    id="span-function">Task</span></p>
+            <ul>
+            </ul>
+        </div>
+        <div class="contact">
+            <a href="#" class="a-contact"> <span><i class="fas fa-file-signature"></i></span> <span
+                    style="display: none" id="span-contact">Contact</span></a>
+        </div>
+        <div class="Description">
+            <a href="#" class="a-description"><span><i class="fas fa-question"></i></span> <span style="display: none"
+                    id="span-description">Description</span></a>
+        </div>
+    </div>
+    <div class="main-manager" id="main-manager">
+        <div class="factory-camera">
+            <video class="factory-video" controls>
+                <source id="video-source" type="video/mp4">
+            </video>
+        </div>
+        <div class="factory-controller">
+            <div class="belt-controller">
+                <p class="belt-name">Conveyor belt</p>
+                <p class="belt-status"> <span class="belt-status-name" id="belt-status-name-id">Now status: Off</span>
+                    <input type="button" value="On" class="belt-status-class" id="belt-status-id">
+                </p>
+                <p>
+                    <span class="belt-speed-name" id="belt-speed">Conveyor belt speed: 0</span>
+                    <input class="belt-speed-class" id="belt-speed-id" type="range" min="0" max="255" value="0">
+                </p>
+            </div>
+            <div class="arm-controller">
+                <p class="arm-name">Robot Arm</p>
+                <div class="arm-auto-destination">
+                    <p class="arm-auto-name">Auto Control Tab</p>
+                    <p class="pauto"><span>x </span> <input type="text" class="arm-l arm-x-class" id="arm-x-id"
+                            value="0"></p>
+                    <p class="pauto"><span>y </span> <input type="text" class="arm-l arm-y-class" id="arm-y-id"
+                            value="0"></p>
+                    <p class="pauto"><span>z </span> <input type="text" class="arm-l arm-z-class" id="arm-z-id"
+                            value="0"></p>
+                    <input class="arm-auto-class" id="arm-auto-id" type="button" value="Move">
+                </div>
+                <div class="arm-handwork">
+                    <p class="arm-handwork-name">Control</p>
+                    <p class="phandwork"><span>Joint 1</span> <input type="range" class="arm-j arm-joint-c1"
+                            id="arm-joint-i1" min="0" max="255" value="0"> <span id="arm-j1-value">0</span></p>
+                    <p class="phandwork"><span>Joint 2</span> <input type="range" class="arm-j arm-joint-c2"
+                            id="arm-joint-i2" min="0" max="255" value="0"> <span id="arm-j2-value">0</span></p>
+                    <p class="phandwork"><span>Joint 3</span> <input type="range" class="arm-j arm-joint-c3"
+                            id="arm-joint-i3" min="0" max="255" value="0"> <span id="arm-j3-value">0</span></p>
+                    <p class="phandwork"><span>Joint 4</span> <input type="range" class="arm-j arm-joint-c4"
+                            id="arm-joint-i4" min="0" max="255" value="0"> <span id="arm-j4-value">0</span></p>
+                    <p class="phandwork"><span>Joint 5</span> <input type="range" class="arm-j arm-joint-c5"
+                            id="arm-joint-i5" min="0" max="255" value="0"> <span id="arm-j5-value">0</span></p>
+                    <p class="phandwork"><span>Joint 6</span> <input type="range" class="arm-j arm-joint-c6"
+                            id="arm-joint-i6" min="0" max="255" value="0"> <span id="arm-j6-value">0</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sensor-information">
+            <div class="sensor">
+                <p>Temperature</p>
+            </div>
+            <div class="sensor">
+                <p>Humidity</p>
+            </div>
+            <div class="sensor">
+                <p>Voltage</p>
+            </div>
+            <div class="sensor">
+                <p>Controller </p>
+                <p><i id="device-exist" style="color:green; font-size: 2em;display: none" class="far fa-lightbulb"></i></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../javascript/factory.js"></script>
+</html>
